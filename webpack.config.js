@@ -21,12 +21,13 @@ var config = {
           inject: 'body',
           filename: 'index.html'
         })],
-  module : {
-    loaders : [
+  module: {
+    loaders: [
       {
-        test : /\.jsx?/,
-        include : path.join(__dirname, '/app/'),
-        loader : 'babel-loader'  
+        test: /\.jsx?/,
+        exclude: '/node_modules/',
+        include: path.join(__dirname, '/app/'),
+        loader: 'babel-loader',
       }
     ]
   }

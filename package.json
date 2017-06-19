@@ -4,7 +4,7 @@
   "description": "Just a sample boiler plate for react-redux",
   "main": "index.js",
   "scripts": {
-    "build": "",
+    "build" : "webpack -p",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
