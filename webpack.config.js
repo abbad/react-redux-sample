@@ -20,7 +20,16 @@ var config = {
           template: 'app/index.html',
           inject: 'body',
           filename: 'index.html'
-        })]
+        })],
+  module : {
+    loaders : [
+      {
+        test : /\.jsx?/,
+        include : path.join(__dirname, '/app/'),
+        loader : 'babel-loader'  
+      }
+    ]
+  }
 };
 
 module.exports = config;

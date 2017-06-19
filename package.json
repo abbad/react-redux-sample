@@ -4,8 +4,9 @@
   "description": "Just a sample boiler plate for react-redux",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,6 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-hot-loader": "^3.0.0-beta.7",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-redux": "^4.0.8",
@@ -36,7 +36,12 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^2.28.0",
+    "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
