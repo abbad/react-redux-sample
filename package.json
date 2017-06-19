@@ -4,7 +4,7 @@
   "description": "Just a sample boiler plate for react-redux",
   "main": "index.js",
   "scripts": {
-    "build" : "webpack -p",
+    "build": "webpack -p",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +31,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0"
