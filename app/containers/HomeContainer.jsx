@@ -6,6 +6,6 @@ import { Link } from 'react-router'
 export default class About extends React.Component {
   render() {
     return (<div><p>Home </p>
-            <Link to="/getting-started"><p> Getting Started</p></Link></div>);
+            <Link to="/get-started"><p>Get Started</p></Link></div>);
   }
 }
