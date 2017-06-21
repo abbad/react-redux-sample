@@ -8,8 +8,7 @@ var config = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'react-hot-loader/patch',
-    // TODO: Error: [HMR] Hot Module Replacement is disabled. (investigate)
-    // 'webpack/hot/only-dev-server',
+    'webpack/hot/dev-server',
     path.resolve(__dirname, 'app/index.jsx')
   ],
   output: {
@@ -20,16 +19,26 @@ var config = {
           template: 'app/index.html',
           inject: 'body',
           filename: 'index.html'
-        })],
+        }),
+      new webpack.HotModuleReplacementPlugin()],
   module: {
-    loaders: [
-      {
-        test: /\.jsx?/,
-        exclude: '/node_modules/',
-        include: path.join(__dirname, '/app/'),
-        loader: 'babel-loader',
-      }
-    ]
+    rules: [{
+      // Sass loader
+      test: /\.scss$/,
+      use: [{
+        loader: "style-loader" // creates style nodes from JS strings
+      }, {
+        loader: "css-loader" // translates CSS into CommonJS
+      }, {
+        loader: "sass-loader" // compiles Sass to CSS
+      }]
+    }, {
+      // Babel loader for JSX.
+      test: /\.jsx?/,
+      exclude: '/node_modules/',
+      include: path.join(__dirname, '/app/'),
+      use: [{loader: 'babel-loader'}]
+    }]
   }
 };
 
