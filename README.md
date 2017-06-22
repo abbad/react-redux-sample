@@ -4,5 +4,5 @@
 # Steps to run application.
 1. Run `npm install`
 2. Run `npm start` 
-3. Go to `http://localhost.com:3000
+3. Go to `http://localhost.com:3000`
 
