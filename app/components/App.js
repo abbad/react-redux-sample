@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const App = ({children}) =>
+const App = ({ children }) =>
     <div className="wrapper">
         <div className="content">
             <div className="row">
@@ -13,7 +13,7 @@ const App = ({children}) =>
     </div>;
 
 App.propTypes = {
-    children: PropTypes.object
+  children: PropTypes.object,
 };
 
 export default App;

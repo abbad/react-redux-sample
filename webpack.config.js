@@ -9,7 +9,7 @@ var config = {
     'webpack-dev-server/client?http://localhost:3000',
     'react-hot-loader/patch',
     'webpack/hot/dev-server',
-    path.resolve(__dirname, 'app/index.jsx')
+    path.resolve(__dirname, 'app/index.js')
   ],
   output: {
     path: BUILD_DIR,
@@ -38,8 +38,20 @@ var config = {
       exclude: '/node_modules/',
       include: path.join(__dirname, '/app/'),
       use: [{loader: 'babel-loader'}]
-    }]
-  }
-};
+    }, {
+      // Linter
+      enforce: "pre",
+      test: /\.js?/,
+      exclude: /node_modules/,
+      loader: "eslint-loader",
+
+      options: {
+        emitError: true,
+        configFile: '.eslintrc',
+        fix: true
+        // eslint options (if necessary)
+      }
+    }
+]}};
 
 module.exports = config;
