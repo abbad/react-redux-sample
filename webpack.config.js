@@ -4,23 +4,28 @@ var path = require('path');
 
 var BUILD_DIR = path.join(__dirname, '/dist/');
 
+
+require("babel-polyfill") ;
+
 var config = {
+  devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
-    'webpack/hot/dev-server',
-    path.resolve(__dirname, 'app/index.js')
+    path.join(__dirname, 'app/index.js')
   ],
   output: {
-    path: BUILD_DIR,
-    filename: 'bundle.js',
+    path: path.join(__dirname, '/dist/'),
+       filename: '[name].js',
+       publicPath: '/'
   },
   plugins: [new HtmlWebpackPlugin({
           template: 'app/index.html',
           inject: 'body',
           filename: 'index.html'
         }),
-      new webpack.HotModuleReplacementPlugin()],
+    new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [{
       // Sass loader
@@ -41,15 +46,13 @@ var config = {
     }, {
       // Linter
       enforce: "pre",
-      test: /\.js?/,
-      exclude: /node_modules/,
+      test: /\.jsx?$/,
+      exclude: ['/node_modules/'],
       loader: "eslint-loader",
-
       options: {
         emitError: true,
         configFile: '.eslintrc',
         fix: true
-        // eslint options (if necessary)
       }
     }
 ]}};

@@ -1,10 +1,15 @@
 {
+  "globals": {
+    "document": true,
+    "window": true
+  },
   parser: "babel-eslint",
   "plugins": [
     "react"
   ],
-  "extends": ["airbnb-base"],
   "rules": {
-    linebreak-style: ["error", "windows"],
+    class-methods-use-this: ["error", { "exceptMethods": ["render"] }]
+
   },
+  "extends": ["airbnb-base",  "plugin:react/recommended"]
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default class FormContainer extends React.Component {
+require('../stylesheets/_main.scss');
 
-  handleChange(event) {
-    console.log(event);
-  }
+
+export default class FormContainer extends React.Component {
 
   render() {
     return (<div className='form_container'>
@@ -30,7 +29,7 @@ export default class FormContainer extends React.Component {
                 ZIP|Postal Code:
                   <input type="text" name="zipcode" />
               </label>
-              <select value="USA" onChange={ this.handleChange }>
+              <select value="USA" >
                   <option value="USA">USA</option>
               </select>
           <input type="button" value="Next" />

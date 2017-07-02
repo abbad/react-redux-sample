@@ -7,9 +7,9 @@ import FormContainer from './containers/FormContainer.jsx';
 import HomeContainer from './containers/HomeContainer.jsx';
 
 export default (
-	<Route path="/" component={App}>
-		<IndexRoute component={HomeContainer}/>
-		<Route path="/get-started" component={FormContainer}/>
-		<Route path="/about" component={About}/>
-	</Route>
+  <Route path="/" component={App}>
+    <IndexRoute component={HomeContainer}/>
+    <Route path="/get-started" component={FormContainer}/>
+    <Route path="/about" component={About}/>
+  </Route>
 );
