@@ -2,13 +2,28 @@
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 100px;
-  width: 400px;
+  width: 300px;
   margin-right: auto;
   margin-left: auto
 }
 
-.address_form .field { padding: 4px; margin:1px; }
+.address_form .field {
+  padding: 4px;
+  margin:1px;
+}
 
-.address_form .field label { display:inline-block; width:120px; margin-left:5px; }
+.address_form .field label {
+  display: block;
+  padding-bottom: 12px;
+}
 
-.address_form .field input { display:inline-block; }
+.address_form .field input {
+  display: block;
+  size: 30px;
+}
+
+.next-button {
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
