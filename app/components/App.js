@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 const App = ({ children }) =>
     <div className="wrapper">
         <div className="content">
-            <div className="row">
-                <div className="columns small-12">
-                    {children}
-                </div>
-            </div>
+          {children}
         </div>
     </div>;
 
