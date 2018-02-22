@@ -8,7 +8,7 @@ class AddressComponent extends React.Component {
     return (
       <div className='address_form'>
         <div className="address_form__field">
-          <h2>Where are you located? </h2>
+          <h2> Where are you located? </h2>
         </div>
         <form>
           <label htmlFor='addressLineOne' className="address_form__field__label"> Address Line One: </label>
